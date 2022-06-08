@@ -1,0 +1,27 @@
+{
+  "name": "ong-poc",
+  "version": "1.0.0",
+  "description": "Serverless aws-nodejs-typescript template",
+  "author": "TfNSW",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sls offline"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^2.23.0",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/node": "^14.14.25",
+    "esbuild": "^0.14.42",
+    "esbuild-node-externals": "^1.4.1",
+    "serverless": "^2.23.0",
+    "serverless-esbuild": "^1.17.1",
+    "serverless-offline": "^8.8.0",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "ong-tokens-poc": [
+    {
+      "PutRequest": {
+        "Item": {
+          "tokenId": { "S": "36ac9124-9c17-446a-8f0c-be35eb9cc827" },
+          "balance": { "N": "123" },
+          "fare": { "S": "ADULT" },
+          "status": { "S": "ACTIVE" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "tokenId": { "S": "1d4a956e-1902-4c3a-9489-617681976bfb" },
+          "balance": { "N": "456" },
+          "fare": { "S": "CONCESSION" },
+          "status": { "S": "ACTIVE" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "tokenId": { "S": "120612af-90a9-40e8-82fa-8624ff1fb200" },
+          "balance": { "N": "0" },
+          "fare": { "S": "CONCESSION" },
+          "status": { "S": "BLOCKED" }
+        }
+      }
+    }
+  ],
+  "ong-taps-poc": [
+    {
+      "PutRequest": {
+        "Item": {
+          "tapId": {
+            "S": "958952c2-6f22-4324-9688-90ecd61ed2fb"
+          },
+          "stopId": {
+            "N": "23"
+          },
+          "tapTime": {
+            "N": "1654659841"
+          },
+          "tokenId": {
+            "S": "36ac9124-9c17-446a-8f0c-be35eb9cc827"
+          },
+          "type": {
+            "S": "TAP_ON"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "tapId": {
+            "S": "aec72656-741c-4b9b-968c-3c4301d13782"
+          },
+          "stopId": {
+            "N": "23"
+          },
+          "tapTime": {
+            "N": "1654659841"
+          },
+          "tokenId": {
+            "S": "36ac9124-9c17-446a-8f0c-be35eb9cc827"
+          },
+          "type": {
+            "S": "TAP_OFF"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "tapId": {
+            "S": "c9a0a100-5cef-4a67-8e07-06c398178d34"
+          },
+          "stopId": {
+            "N": "25"
+          },
+          "tapTime": {
+            "N": "1654659841"
+          },
+          "tokenId": {
+            "S": "1d4a956e-1902-4c3a-9489-617681976bfb"
+          },
+          "type": {
+            "S": "TAP_ON"
+          }
+        }
+      }
+    }
+  ]
+}
