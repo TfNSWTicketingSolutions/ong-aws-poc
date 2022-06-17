@@ -1,7 +1,9 @@
-const AWS = require("aws-sdk");
+const AWS = require('aws-sdk');
 const ddbClient = new AWS.DynamoDB.DocumentClient();
 
-import { formatError, formatResponse } from "../libs/http-lambda";
+import 'source-map-support/register';
+
+import { formatError, formatResponse } from '../libs/http-lambda';
 
 export const handler = async (event, _context) => {
   // event.body will contain the payload of a new tap
@@ -10,27 +12,27 @@ export const handler = async (event, _context) => {
     taps = (
       await ddbClient
         .query({
-          TableName: "ong-taps-poc",
-          IndexName: "tripsByToken",
-          KeyConditionExpression: "#tokenId = :tokenId",
+          TableName: 'ong-taps-poc',
+          IndexName: 'tripsByToken',
+          KeyConditionExpression: '#tokenId = :tokenId',
           ExpressionAttributeNames: {
-            "#tokenId": "tokenId",
+            '#tokenId': 'tokenId'
           },
           ExpressionAttributeValues: {
-            ":tokenId": event.pathParameters.tokenId,
-          },
+            ':tokenId': event.pathParameters.tokenId
+          }
         })
         .promise()
     ).Items;
 
     let res;
-    if (!taps.length || taps[taps.length - 1].type === "TAP_OFF") {
-      res = { type: "TAP_ON", success: true };
+    if (!taps.length || taps[taps.length - 1].type === 'TAP_OFF') {
+      res = { type: 'TAP_ON', success: true };
     } else {
       res = {
-        type: "TAP_OFF",
+        type: 'TAP_OFF',
         fare: Math.floor(Math.random() * 700 + 300),
-        success: true,
+        success: true
       };
     }
 
