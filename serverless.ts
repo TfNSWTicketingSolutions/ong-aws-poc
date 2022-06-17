@@ -140,8 +140,9 @@ const serverlessConfiguration: AWS = {
           BillingMode: 'PAY_PER_REQUEST'
         }
       }
-    }
-  }
+    },
+  },
+
 };
 
 module.exports = serverlessConfiguration;
