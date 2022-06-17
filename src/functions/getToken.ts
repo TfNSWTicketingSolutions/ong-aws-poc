@@ -1,6 +1,8 @@
 const AWS = require('aws-sdk');
 const ddbClient = new AWS.DynamoDB.DocumentClient();
 
+import 'source-map-support/register';
+
 import { formatError, formatResponse } from '../libs/http-lambda';
 
 export const handler = async (event, _context) => {
